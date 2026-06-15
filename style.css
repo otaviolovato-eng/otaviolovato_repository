@@ -1,1 +1,155 @@
+/* Reset e Variáveis */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+:root {
+    --cor-primaria: #00763b; /* Verde esportivo */
+    --cor-secundaria: #ffdf00; /* Amarelo */
+    --cor-fundo: #f4f7f6;
+    --cor-texto: #333;
+    --cor-card: #ffffff;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 5px solid var(--cor-secundaria);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--cor-secundaria);
+}
+
+/* Seções */
+main {
+    padding: 2rem 0;
+}
+
+h2 {
+    color: var(--cor-primaria);
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--cor-secundaria);
+    padding-left: 10px;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+/* Grid de Jogos */
+.grid-jogos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card-jogo {
+    background-color: var(--cor-card);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card-jogo:hover {
+    transform: translateY(-5px);
+}
+
+.card-jogo .data-hora {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.placar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+.bandeira {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+/* Tabela de Classificação */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--cor-card);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+}
+
+th {
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #222;
+    color: white;
+    margin-top: 2rem;
+}
